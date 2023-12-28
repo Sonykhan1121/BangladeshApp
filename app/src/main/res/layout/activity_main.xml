@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bangladesh" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bd_map_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_xml"
+        android:fontFamily="@font/abril_fatface"
+        android:text="Map"
+        android:textAllCaps="false"
+        android:textColor="#EF0707"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/division_id"
+        app:layout_constraintEnd_toStartOf="@+id/division_id"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/division_id" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/division_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/btn_xml"
+        android:fontFamily="@font/abril_fatface"
+        android:text="Divisions"
+        android:textAllCaps="false"
+        android:textColor="#EF0707"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bd_map_id"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/districts_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_xml"
+        android:fontFamily="@font/abril_fatface"
+        android:text="Districts"
+        android:textAllCaps="false"
+        android:textColor="#EF0707"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/history_id"
+        app:layout_constraintEnd_toStartOf="@+id/history_id"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/history_id" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/history_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/btn_xml"
+        android:fontFamily="@font/abril_fatface"
+        android:text="Historycal Place"
+        android:textAllCaps="false"
+        android:textColor="#EF0707"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/districts_id"
+        app:layout_constraintTop_toBottomOf="@+id/division_id" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Know More About Bangladesh"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

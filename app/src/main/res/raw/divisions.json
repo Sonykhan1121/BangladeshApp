@@ -1,0 +1,69 @@
+{
+  "divisions": [
+    {
+      "id": "1",
+      "name": "Barishal",
+      "bn_name": "বরিশাল",
+      "lat": "22.701002",
+      "long": "90.353451",
+      "picture":"https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/b78b9109-acfb-4864-bab9-1d02d025d847"
+    },
+    {
+      
+      "id": "2",
+      "name": "Chattogram",
+      "bn_name": "চট্টগ্রাম",
+      "lat": "22.356851",
+      "long": "91.783182",
+      "picture":"https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/b9629357-a97c-42bb-b530-fa204017f202"
+    },
+    {
+      "id": "3",
+      "name": "Dhaka",
+      "bn_name": "ঢাকা",
+      "lat": "23.810332",
+      "long": "90.412518",
+      "picture":"https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/022732a4-1a4b-4e62-942b-f88db6a3fd31"
+    },
+    {
+      "id": "4",
+      "name": "Khulna",
+      "bn_name": "খুলনা",
+      "lat": "22.845641",
+      "long": "89.540328",
+      "picture":"https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/53fa0475-2174-42c8-af74-520640a50f90"
+    },
+    {
+      "id": "5",
+      "name": "Rajshahi",
+      "bn_name": "রাজশাহী",
+      "lat": "24.363589",
+      "long": "88.624135",
+      "picture":"https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/686cd1f1-51aa-4324-85ec-c9765dd5e497"
+    },
+    {
+      "id": "6",
+      "name": "Rangpur",
+      "bn_name": "রংপুর",
+      "lat": "25.743892",
+      "long": "89.275227",
+      "picture":"https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/1a8e446f-859d-4ec0-a858-f3b25db49c8f"
+    },
+    {
+      "id": "7",
+      "name": "Sylhet",
+      "bn_name": "সিলেট",
+      "lat": "24.894929",
+      "long": "91.868706",
+      "picture":"https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/04268bc5-874d-4aef-a314-babdbccc5810"
+    },
+    {
+      "id": "8",
+      "name": "Mymensingh",
+      "bn_name": "ময়মনসিংহ",
+      "lat": "24.747149",
+      "long": "90.420273",
+      "picture":"https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/aee21222-9e34-43fa-a80e-a29bf472ce05"
+    }
+  ]
+}
