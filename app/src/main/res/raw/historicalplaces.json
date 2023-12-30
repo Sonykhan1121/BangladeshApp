@@ -3,6 +3,7 @@
     {
       
       "name": "Lalbagh Fort",
+      "place": "Lalbagh Rd, Dhaka 1211",
       "picture": "https://www.travelmate.com.bd/wp-content/uploads/2019/08/Lalbagh-Fort.jpg"
       
   
@@ -10,54 +11,72 @@
     {
      
       "name": "Ahsan Manzil",
+      "place": "Kumartoli of Dhaka on the bank of the Buriganga",
+
       "picture": "https://www.travelmate.com.bd/wp-content/uploads/2019/08/Ahsan-Manzil.jpg"
       
     },
     {
     
       "name": "Panam City",
+      "place": "the present-day capital of Dhaka",
+
       "picture": "https://www.travelmate.com.bd/wp-content/uploads/2019/08/Panam-City.jpg"
       
     },
     {
     
       "name": "Mahansthangarh",
+      "place": "Mahasthan, Bogra District, Rajshahi Division, Bangladesh",
+
       "picture": "https://www.travelmate.com.bd/wp-content/uploads/2019/08/Mahasthangarh.jpg"
       
     },
     {
     
       "name": "Shat Gambuj Mosque",
+      "place": "Khulna Road, Bagerhat 9300",
+
       "picture": "https://www.travelmate.com.bd/wp-content/uploads/2019/08/Shat-Gombuj-Mosque.jpg"
       
     },
     {
     
       "name": "Liberation War Museum",
+      "place": "F11/A & F11/B Sher-e Bangla Nagar ",
+
       "picture": "https://www.travelmate.com.bd/wp-content/uploads/2019/08/Liberation-War-Museum.jpg"
       
     },
     {
     
       "name": "Mainamati",
+      "place": "almost 8 miles from the city of Comilla",
+
       "picture": "https://www.travelmate.com.bd/wp-content/uploads/2019/08/Mainamati.jpg"
       
     },
     {
     
       "name": "Star Mosque",
+      "place": "Armanitola area, Dhaka, Bangladesh",
+
       "picture": "https://www.travelmate.com.bd/wp-content/uploads/2019/08/Star-Mosque.jpg"
       
     },
     {
     
       "name": "Shaheed Minar",
+      "place": "Near Dhaka Medical College Gate, Secretariat Road, Secretariate Rd, Dhaka 1000",
+
       "picture": "https://www.travelmate.com.bd/wp-content/uploads/2019/08/Shaheed-Minar.jpg"
       
     },
     {
     
       "name": "National Memorial",
+      "place": "Savar, about 35 km north-west of the capital, Dhaka",
+
       "picture": "https://www.travelmate.com.bd/wp-content/uploads/2019/08/National-Memorial.jpg"
       
     }

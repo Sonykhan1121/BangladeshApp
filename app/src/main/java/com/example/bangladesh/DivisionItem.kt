@@ -19,4 +19,4 @@ data class DivisionItem(
     }
 }
 
-data class DivisionList(val divisions: List<DivisionItem>)
+data class DivisionList(@SerializedName("divisions") val divisions: List<DivisionItem>)
