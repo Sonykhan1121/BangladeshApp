@@ -11,3 +11,8 @@
 ### After clicking Divisions Button
 
 <img src="https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/a8a11a89-15d5-4a8b-b86d-7b344d3fb124" width="200" height="370" style="border: 2px solid #000; border-radius: 10px;">
+
+### Add two more button to  recycleview and showing result
+
+<img src="https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/7a455c59-495d-43a9-be9e-6f58267c30d3" width="200" height="370" style="border: 2px solid #000; border-radius: 10px;">
+<img src="https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/44820ffc-dae6-4ec2-8bf1-724e61af2002" width="200" height="370" style="border: 2px solid #000; border-radius: 10px;">
