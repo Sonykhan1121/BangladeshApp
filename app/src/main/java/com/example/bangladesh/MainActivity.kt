@@ -14,7 +14,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.bdMapId.setOnClickListener {
-            // Handle the click event for the Map button if needed
+            val intent = Intent(this,PdfViewerActivity::class.java)
+            startActivity(intent)
         }
 
         binding.divisionId.setOnClickListener {
