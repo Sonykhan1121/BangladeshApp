@@ -20,3 +20,9 @@
 ### click map button open pdf map of bangladesh
 
 <img src="https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/beb1a353-1c53-4353-ab28-73b5816843eb" width="200" height="370" style="border: 2px solid #000; border-radius: 10px;">
+
+### when click on division item , show history ,places, foods
+
+<img src="https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/16ec03b2-254d-492f-a311-afe639ebee38" width="200" height="370" style="border: 2px solid #000; border-radius: 10px;">
+<img src="https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/f92848fe-cb51-4225-bd07-aa862c8d8387" width="200" height="370" style="border: 2px solid #000; border-radius: 10px;">
+<img src="https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/7a03dfe3-b0d0-4884-b125-b0ab558a62f2" width="200" height="370" style="border: 2px solid #000; border-radius: 10px;">
