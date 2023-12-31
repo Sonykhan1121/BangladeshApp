@@ -1,6 +1,7 @@
 package com.example.bangladesh
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.bangladesh.databinding.ActivityDivisionrecyclevieBinding
 import java.io.InputStreamReader
 
-class Divisionrecyclevie_Activity : AppCompatActivity() {
+class Divisionrecyclevie_Activity : AppCompatActivity(),OnItemClickListener {
     private lateinit var divisionAdapter: DivisionAdapter
     private lateinit var districtAdapter: DistrictAdapter
     private lateinit var historicalPlaceAdapter: HistoricalPlaceAdapter
@@ -73,7 +74,7 @@ class Divisionrecyclevie_Activity : AppCompatActivity() {
             // Set up RecyclerView based on the data type
             when (dataList.firstOrNull()) {
                 is DivisionItem -> {
-                    divisionAdapter = DivisionAdapter(dataList as List<DivisionItem>)
+                    divisionAdapter = DivisionAdapter(dataList as List<DivisionItem>,this)
                     setRecyclerViewAdapter(divisionAdapter)
                 }
                 is DistrictItem -> {
@@ -101,5 +102,16 @@ class Divisionrecyclevie_Activity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(this@Divisionrecyclevie_Activity)
             this.adapter = adapter
         }
+    }
+
+    override fun onItemClick(position: Int) {
+        val selectedItem=  divisionAdapter.divisions[position].name
+        val banglaname = divisionAdapter.divisions[position].bnName
+        val intent = Intent(this,DetailedActivity::class.java)
+        intent.putExtra("selectedItem",selectedItem)
+        intent.putExtra("banglaname",banglaname)
+        startActivity(intent)
+
+
     }
 }

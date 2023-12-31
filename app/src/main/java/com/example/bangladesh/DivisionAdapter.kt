@@ -1,17 +1,20 @@
 package com.example.bangladesh
 import android.view.LayoutInflater
+import android.view.View.OnClickListener
 import android.view.ViewGroup
+import android.widget.AdapterView
+import com.example.bangladesh.OnItemClickListener
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.bangladesh.databinding.ItemDivisionBinding
 
-class DivisionAdapter(private val divisions: List<DivisionItem>) :
+class DivisionAdapter(val divisions: List<DivisionItem>, private val clickListener: OnItemClickListener) :
     RecyclerView.Adapter<DivisionAdapter.DivisionViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DivisionViewHolder {
         val binding =
             ItemDivisionBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return DivisionViewHolder(binding)
+        return DivisionViewHolder(binding,clickListener)
     }
 
     override fun onBindViewHolder(holder: DivisionViewHolder, position: Int) {
@@ -23,7 +26,7 @@ class DivisionAdapter(private val divisions: List<DivisionItem>) :
         return divisions.size
     }
 
-    class DivisionViewHolder(private val binding: ItemDivisionBinding) :
+    class DivisionViewHolder(private val binding: ItemDivisionBinding,private val clickListener:OnItemClickListener) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(division: DivisionItem) {
@@ -35,9 +38,16 @@ class DivisionAdapter(private val divisions: List<DivisionItem>) :
                 Glide.with(itemView.context)
                     .load(division.picture)
                     .into(imageId)
+                itemView.setOnClickListener {
+                    // Trigger the onItemClick method when an item is clicked
+                    clickListener.onItemClick(adapterPosition)
+                }
 
                 // You can set other views based on your DivisionItem properties
             }
         }
     }
 }
+
+
+
