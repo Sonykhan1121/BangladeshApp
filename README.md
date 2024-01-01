@@ -26,3 +26,9 @@
 <img src="https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/16ec03b2-254d-492f-a311-afe639ebee38" width="200" height="370" style="border: 2px solid #000; border-radius: 10px;">
 <img src="https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/f92848fe-cb51-4225-bd07-aa862c8d8387" width="200" height="370" style="border: 2px solid #000; border-radius: 10px;">
 <img src="https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/7a03dfe3-b0d0-4884-b125-b0ab558a62f2" width="200" height="370" style="border: 2px solid #000; border-radius: 10px;">
+
+### click picture and open in new Activity , select district see details in webview
+
+<img src="https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/33fbba64-b719-4dcd-9771-dfbe4c264ee1" width="200" height="370" style="border: 2px solid #000; border-radius: 10px;">
+<img src="https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/7d2429d0-e99e-4a8e-a859-4b6c994c12c4" width="200" height="370" style="border: 2px solid #000; border-radius: 10px;">
+<img src="https://github.com/Sonykhan1121/BangladeshApp/assets/45848552/24970db3-8db3-40cd-9189-e6c55ff9dcd7" width="200" height="370" style="border: 2px solid #000; border-radius: 10px;">
