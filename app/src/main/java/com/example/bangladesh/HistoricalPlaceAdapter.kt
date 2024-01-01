@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.bangladesh.databinding.ItemHistoricalPlaceBinding
 
-class HistoricalPlaceAdapter(private val historicalplaces:List<HistoricalPlaceItem>):RecyclerView.Adapter<HistoricalPlaceAdapter.HistoricalplaceViewHolder>() {
-    class HistoricalplaceViewHolder(private val binding:ItemHistoricalPlaceBinding):RecyclerView.ViewHolder(binding.root) {
+class HistoricalPlaceAdapter( val historicalplaces:List<HistoricalPlaceItem>,private val clickListener: OnItemClickListener):RecyclerView.Adapter<HistoricalPlaceAdapter.HistoricalplaceViewHolder>() {
+    class HistoricalplaceViewHolder(private val binding:ItemHistoricalPlaceBinding,private val clickListener: OnItemClickListener):RecyclerView.ViewHolder(binding.root) {
         fun bind(historicalplace: HistoricalPlaceItem){
             binding.apply {
 
@@ -17,6 +17,9 @@ class HistoricalPlaceAdapter(private val historicalplaces:List<HistoricalPlaceIt
                 Glide.with(itemView.context)
                     .load(historicalplace.picture)
                     .into(imageId)
+                itemView.setOnClickListener {
+                    clickListener.onItemClick(adapterPosition)
+                }
             }
         }
 
@@ -27,7 +30,7 @@ class HistoricalPlaceAdapter(private val historicalplaces:List<HistoricalPlaceIt
         viewType: Int
     ): HistoricalPlaceAdapter.HistoricalplaceViewHolder {
         val binding = ItemHistoricalPlaceBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return HistoricalplaceViewHolder(binding)
+        return HistoricalplaceViewHolder(binding,clickListener)
     }
 
 

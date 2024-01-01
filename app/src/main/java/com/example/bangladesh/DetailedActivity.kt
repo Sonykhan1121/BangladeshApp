@@ -1,5 +1,6 @@
 package com.example.bangladesh
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import android.webkit.WebChromeClient
@@ -34,59 +35,119 @@ class DetailedActivity : AppCompatActivity() {
         loadImages(title_name)
         loadVideos(title_name)
 
+        binding.ig1Id.setOnClickListener {
+            openDisplayImageActivity(binding.ig1Id.tag as Int,title_name)
+        }
+
+        binding.ig2Id.setOnClickListener {
+            openDisplayImageActivity(binding.ig2Id.tag as Int,title_name)
+        }
+
+        binding.ig3Id.setOnClickListener {
+            openDisplayImageActivity(binding.ig3Id.tag as Int,title_name)
+        }
 
 
     }
+
+    private fun openDisplayImageActivity(imageId: Int, titleName: String?) {
+            val intent = Intent(this,ShowPictureActivity::class.java)
+        intent.putExtra("imageId",imageId)
+        intent.putExtra("title",titleName)
+        startActivity(intent)
+    }
+
+
     private fun loadImages(selectedItem: String?) {
 
         if(selectedItem=="Barishal")
         {
 
             binding.ig1Id.setImageResource(R.drawable.br2)
+            binding.ig1Id.tag = R.drawable.br2
             binding.ig2Id.setImageResource(R.drawable.br3)
+            binding.ig2Id.tag = R.drawable.br3
+
             binding.ig3Id.setImageResource(R.drawable.br1)
+            binding.ig3Id.tag = R.drawable.br1
+
         }
         else if(selectedItem=="Chattogram")
         {
             binding.ig1Id.setImageResource(R.drawable.ct1)
+            binding.ig1Id.tag = R.drawable.ct1
+
             binding.ig2Id.setImageResource(R.drawable.ct2)
+            binding.ig2Id.tag = R.drawable.ct2
+
             binding.ig3Id.setImageResource(R.drawable.ct3)
+            binding.ig3Id.tag = R.drawable.ct3
         }else if(selectedItem=="Dhaka")
         {
             binding.ig1Id.setImageResource(R.drawable.dk1)
+            binding.ig1Id.tag = R.drawable.dk1
+
             binding.ig2Id.setImageResource(R.drawable.dk2)
+            binding.ig2Id.tag = R.drawable.dk2
+
             binding.ig3Id.setImageResource(R.drawable.dk3)
+            binding.ig3Id.tag = R.drawable.dk3
         }
         else if(selectedItem=="Khulna")
         {
             binding.ig1Id.setImageResource(R.drawable.kl1)
+            binding.ig1Id.tag = R.drawable.kl1
+
             binding.ig2Id.setImageResource(R.drawable.kl2)
+            binding.ig2Id.tag = R.drawable.kl2
+
             binding.ig3Id.setImageResource(R.drawable.kl3)
+            binding.ig3Id.tag = R.drawable.kl3
         }
         else if(selectedItem=="Rajshahi")
         {
             binding.ig1Id.setImageResource(R.drawable.rj2)
+            binding.ig1Id.tag = R.drawable.rj2
+
             binding.ig2Id.setImageResource(R.drawable.rj3)
+            binding.ig2Id.tag = R.drawable.rj3
+
             binding.ig3Id.setImageResource(R.drawable.rj1)
+            binding.ig3Id.tag = R.drawable.rj1
         }
         else if(selectedItem=="Rangpur")
         {
             binding.ig1Id.setImageResource(R.drawable.rg1)
+            binding.ig1Id.tag = R.drawable.rg1
+
             binding.ig2Id.setImageResource(R.drawable.rg2)
+            binding.ig2Id.tag = R.drawable.rg2
+
             binding.ig3Id.setImageResource(R.drawable.rg3)
+            binding.ig3Id.tag = R.drawable.rg3
         }
         else if(selectedItem=="Sylhet")
         {
             binding.ig1Id.setImageResource(R.drawable.sl1)
+            binding.ig1Id.tag = R.drawable.sl1
+
             binding.ig2Id.setImageResource(R.drawable.sl2)
+            binding.ig2Id.tag = R.drawable.sl2
+
             binding.ig3Id.setImageResource(R.drawable.sl3)
+            binding.ig3Id.tag = R.drawable.sl3
 
         }
         else if(selectedItem=="Mymensingh")
         {
             binding.ig1Id.setImageResource(R.drawable.mg2)
+            binding.ig1Id.tag = R.drawable.mg2
+
             binding.ig2Id.setImageResource(R.drawable.ms1)
+            binding.ig2Id.tag = R.drawable.ms1
+
             binding.ig3Id.setImageResource(R.drawable.ms2)
+            binding.ig3Id.tag = R.drawable.ms2
         }
     }
     private fun loadVideos(selectedItem: String?) {
@@ -97,17 +158,17 @@ class DetailedActivity : AppCompatActivity() {
 
         if(selectedItem.equals("Barishal"))
         {
-            val video1 = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/DnSmHJIbf6k?si=dtMzDci8tqt-z9Sc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+            val video1 = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/xMRJ8Nv-7Xs?si=MIJnA4M1XxkWLZAD\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
             binding.historyVideoId.loadData(video1,"text/html","utf-8")
             binding.historyVideoId.settings.javaScriptEnabled = true
             binding.historyVideoId.webChromeClient = WebChromeClient()
 
-            val video2 = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/6elh3nkAYiQ?si=X3KMFIMYMOcN912j\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+            val video2 = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/d70rN_HCvwA?si=wgNDVvQjo2e0IrDx\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
             binding.popularVideoId.loadData(video2,"text/html","utf-8")
             binding.popularVideoId.settings.javaScriptEnabled = true
             binding.popularVideoId.webChromeClient = WebChromeClient()
 
-            val video3 = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/LEFViZ2RSHA?si=J5R2O9HJ6as0ypFM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
+            val video3 = "<iframe width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/kLcSTdb0R_g?si=h5PnvOa6z2gxF9km\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen></iframe>"
             binding.foodVideoId.loadData(video3,"text/html","utf-8")
             binding.foodVideoId.settings.javaScriptEnabled = true
             binding.foodVideoId.webChromeClient = WebChromeClient()

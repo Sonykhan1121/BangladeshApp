@@ -15,6 +15,7 @@ class Divisionrecyclevie_Activity : AppCompatActivity(),OnItemClickListener {
     private lateinit var districtAdapter: DistrictAdapter
     private lateinit var historicalPlaceAdapter: HistoricalPlaceAdapter
     private lateinit var binding: ActivityDivisionrecyclevieBinding
+    private var currentRecyclerView:Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +32,14 @@ class Divisionrecyclevie_Activity : AppCompatActivity(),OnItemClickListener {
 
             // Load the JSON file based on the resource ID
             loadJsonFile(jsonFileResourceId)
+            when (jsonFileResourceId) {
+                R.raw.divisions -> currentRecyclerView = R.raw.divisions
+                R.raw.districts -> currentRecyclerView = R.raw.districts
+                R.raw.historicalplaces -> currentRecyclerView = R.raw.historicalplaces
+                else -> {
+                    Log.e("jsonId", "Unexpected resource ID: $jsonFileResourceId")
+                }
+            }
         }
         else{
             Log.d("MyApp","intent data not comming")
@@ -78,12 +87,12 @@ class Divisionrecyclevie_Activity : AppCompatActivity(),OnItemClickListener {
                     setRecyclerViewAdapter(divisionAdapter)
                 }
                 is DistrictItem -> {
-                    districtAdapter = DistrictAdapter(dataList as List<DistrictItem>)
+                    districtAdapter = DistrictAdapter(dataList as List<DistrictItem>,this)
                     setRecyclerViewAdapter(districtAdapter)
                 }
                 is HistoricalPlaceItem -> {
                     historicalPlaceAdapter =
-                        HistoricalPlaceAdapter(dataList as List<HistoricalPlaceItem>)
+                        HistoricalPlaceAdapter(dataList as List<HistoricalPlaceItem>,this)
                     setRecyclerViewAdapter(historicalPlaceAdapter)
                 }
                 else -> {
@@ -105,12 +114,49 @@ class Divisionrecyclevie_Activity : AppCompatActivity(),OnItemClickListener {
     }
 
     override fun onItemClick(position: Int) {
-        val selectedItem=  divisionAdapter.divisions[position].name
-        val banglaname = divisionAdapter.divisions[position].bnName
-        val intent = Intent(this,DetailedActivity::class.java)
-        intent.putExtra("selectedItem",selectedItem)
-        intent.putExtra("banglaname",banglaname)
-        startActivity(intent)
+
+        when(currentRecyclerView)
+        {
+            R.raw.divisions->{
+
+               val selectedItem = divisionAdapter.divisions[position].name
+                val bname = divisionAdapter.divisions[position].bnName
+                val intent = Intent(this,DetailedActivity::class.java)
+                intent.putExtra("selectedItem",selectedItem)
+                intent.putExtra("banglaname",bname)
+
+                startActivity(intent)
+            }
+            R.raw.districts->{
+
+               val selectedItem= districtAdapter.districts[position].name
+                val bname = districtAdapter.districts[position].bnName
+                val intent = Intent(this,DistrictWikiActivity::class.java)
+                intent.putExtra("selectedItem",selectedItem)
+                intent.putExtra("banglaname",bname)
+                startActivity(intent)
+            }
+            R.raw.historicalplaces->{
+
+               val selectedItem= historicalPlaceAdapter.historicalplaces[position].name
+                val picture = historicalPlaceAdapter.historicalplaces[position].picture
+                val intent = Intent(this,ShowPictureActivity::class.java)
+                intent.putExtra("selectedItem",selectedItem)
+                intent.putExtra("picture",picture)
+                startActivity(intent)
+
+            }
+            else ->{
+                    Log.d("MyApp","Something is wrong in onitemclicklistener")
+            }
+
+
+        }
+
+
+
+
+
 
 
     }

@@ -5,8 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bangladesh.databinding.ItemDistrictBinding
 
-class DistrictAdapter(private val districts:List<DistrictItem>) :RecyclerView.Adapter<DistrictAdapter.DistrictViewHolder>() {
-    class DistrictViewHolder(private val binding:ItemDistrictBinding) :RecyclerView.ViewHolder(binding.root) {
+class DistrictAdapter(val districts:List<DistrictItem>, private val clickListener: OnItemClickListener) :RecyclerView.Adapter<DistrictAdapter.DistrictViewHolder>() {
+    class DistrictViewHolder(private val binding:ItemDistrictBinding,private val clickListener: OnItemClickListener) :RecyclerView.ViewHolder(binding.root) {
         fun bind(district:DistrictItem)
         {
             binding.apply {
@@ -14,6 +14,9 @@ class DistrictAdapter(private val districts:List<DistrictItem>) :RecyclerView.Ad
                 txtTitleId1.text = district.id.toString()+") "+district.name
                 txtTitleId2.text = "("+district.bnName+")"
                 txtDescriptionId.text = "Latitude and Longitude : \n"+district.lat.toString()+" , "+district.long.toString()
+                itemView.setOnClickListener {
+                    clickListener.onItemClick(adapterPosition)
+                }
 
             }
         }
@@ -24,7 +27,7 @@ class DistrictAdapter(private val districts:List<DistrictItem>) :RecyclerView.Ad
         viewType: Int
     ): DistrictAdapter.DistrictViewHolder {
         val binding = ItemDistrictBinding.inflate(LayoutInflater.from(parent.context),parent,false)
-        return DistrictViewHolder(binding)
+        return DistrictViewHolder(binding,clickListener)
     }
 
     override fun onBindViewHolder(holder: DistrictAdapter.DistrictViewHolder, position: Int) {

@@ -1,123 +1,126 @@
 <!-- res/layout/activity_division_details.xml -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".DetailedActivity">
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/scrolview_id"
-
-    >
-
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scrolview_id"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="match_parent"
 
-        <!-- Division Name -->
-        <TextView
-            android:id="@+id/division_name_id"
+        >
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/bd_icon"
-            android:fontFamily="sans-serif-condensed-light"
-            android:gravity="center"
-            android:paddingBottom="8dp"
-            android:text="Barisal"
-            android:textColor="@android:color/black"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <!-- HorizontalScrollView for Division Images -->
-        <HorizontalScrollView
-            android:id="@+id/horizontalScrollViewImages"
-            android:layout_width="match_parent"
-            android:layout_height="280dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
+            <!-- Division Name -->
+            <TextView
+                android:id="@+id/division_name_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/txt_drawable"
+                android:drawableLeft="@drawable/bd_icon"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingBottom="8dp"
+                android:text="Barisal"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-            <LinearLayout
-                android:id="@+id/linearLayoutDivisionImages"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+            <!-- HorizontalScrollView for Division Images -->
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollViewImages"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp">
 
-                <!-- Add ImageViews for division images -->
-                <androidx.cardview.widget.CardView
+                <LinearLayout
+                    android:id="@+id/linearLayoutDivisionImages"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elevation="10dp"
-                    android:layout_margin="5dp"
-                    >
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                    <ImageView
+                    <!-- Add ImageViews for division images -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp">
 
-                        android:id="@+id/ig1_id"
-                        android:layout_width="380dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="8dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/br1"
-                        />
-                </androidx.cardview.widget.CardView>
+                        <ImageView
+                            android:id="@+id/ig1_id"
+                            android:layout_width="380dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="8dp"
+                            android:clickable="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/br1"
+                            android:tag="@drawable/br1" />
+                    </androidx.cardview.widget.CardView>
 
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elevation="10dp"
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
 
-                    android:layout_margin="5dp"
-                    >
+                        android:elevation="10dp">
 
-                    <ImageView
-                        android:id="@+id/ig2_id"
-                        android:layout_width="380dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="8dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/br2" />
-                </androidx.cardview.widget.CardView>
+                        <ImageView
+                            android:id="@+id/ig2_id"
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elevation="10dp"
-                    android:layout_margin="5dp"
-                    app:cardCornerRadius="20dp"
-                    >
+                            android:layout_width="380dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="8dp"
+                            android:clickable="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/br2" />
+                    </androidx.cardview.widget.CardView>
 
-                    <ImageView
-                        android:id="@+id/ig3_id"
-                        android:layout_width="380dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginRight="8dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/br3" />
-                </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="20dp">
 
-            </LinearLayout>
-        </HorizontalScrollView>
+                        <ImageView
+                            android:id="@+id/ig3_id"
 
-        <!-- Division History -->
-        <TextView
-            android:id="@+id/textViewHistory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_green_light"
-            android:gravity="center"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:text="History"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+                            android:layout_width="380dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="8dp"
+                            android:clickable="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/br3" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Division History -->
+            <TextView
+                android:id="@+id/textViewHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_light"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="History"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
 
             <LinearLayout
@@ -131,8 +134,7 @@
                 <WebView
                     android:id="@+id/history_video_id"
                     android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                    />
+                    android:layout_height="match_parent" />
 
 
                 <!-- Add more VideoViews as needed -->
@@ -140,100 +142,98 @@
             </LinearLayout>
 
 
-        <!-- Popular Places -->
-        <TextView
-            android:id="@+id/textViewPopularPlaces"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_green_light"
-            android:gravity="center"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-            android:text="Popular Places"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <!-- HorizontalScrollView for Videos 2 (After Popular Places) -->
-        <LinearLayout
-            android:id="@+id/linearLayoutVideos2"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-
-            android:orientation="horizontal">
-
-            <!-- Add VideoViews for videos -->
-            <WebView
-                android:id="@+id/popular_video_id"
+            <!-- Popular Places -->
+            <TextView
+                android:id="@+id/textViewPopularPlaces"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                />
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_light"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Popular Places"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- HorizontalScrollView for Videos 2 (After Popular Places) -->
+            <LinearLayout
+                android:id="@+id/linearLayoutVideos2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+
+                android:orientation="horizontal">
+
+                <!-- Add VideoViews for videos -->
+                <WebView
+                    android:id="@+id/popular_video_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
 
-            <!-- Add more VideoViews as needed -->
+                <!-- Add more VideoViews as needed -->
+
+            </LinearLayout>
+
+            <!-- Foods -->
+            <TextView
+                android:id="@+id/textViewFoods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_light"
+                android:gravity="center"
+                android:paddingTop="8dp"
+
+                android:paddingBottom="8dp"
+                android:text="Foods"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- HorizontalScrollView for Videos 3 (After Foods) -->
+            <LinearLayout
+                android:id="@+id/linearLayoutVideos3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+
+                android:orientation="horizontal">
+
+                <!-- Add VideoViews for videos -->
+                <WebView
+                    android:id="@+id/food_video_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+                <!-- Add more VideoViews as needed -->
+
+            </LinearLayout>
+
+            <!-- More Links -->
+            <TextView
+                android:id="@+id/textViewMoreLinks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_green_light"
+                android:gravity="center"
+                android:paddingTop="8dp"
+
+                android:paddingBottom="8dp"
+                android:text="More Links"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Divider Line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <!-- Additional Stylish Elements or Buttons can be added here -->
 
         </LinearLayout>
-
-        <!-- Foods -->
-        <TextView
-            android:id="@+id/textViewFoods"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_green_light"
-            android:gravity="center"
-            android:paddingTop="8dp"
-
-            android:paddingBottom="8dp"
-            android:text="Foods"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <!-- HorizontalScrollView for Videos 3 (After Foods) -->
-        <LinearLayout
-            android:id="@+id/linearLayoutVideos3"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-
-            android:orientation="horizontal">
-
-            <!-- Add VideoViews for videos -->
-            <WebView
-                android:id="@+id/food_video_id"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                />
-
-
-            <!-- Add more VideoViews as needed -->
-
-        </LinearLayout>
-
-        <!-- More Links -->
-        <TextView
-            android:id="@+id/textViewMoreLinks"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_green_light"
-            android:gravity="center"
-            android:paddingTop="8dp"
-
-            android:paddingBottom="8dp"
-            android:text="More Links"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <!-- Divider Line -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"/>
-
-        <!-- Additional Stylish Elements or Buttons can be added here -->
-
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
 </RelativeLayout>
