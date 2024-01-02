@@ -15,26 +15,30 @@ class PdfViewerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPdfViewerBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        loadPdf()
+
+
+    }
+
+    private fun loadPdf() {
         val loadingDialog = createLoadingDialog()
         loadingDialog.show()
+
         binding.pdfView.fromAsset("bangladesh.pdf")
             .enableSwipe(true)
             .swipeHorizontal(false)
             .onError { t ->
                 // Handle error (e.g., log it or display a message)
-                Log.e("PdfViewer", "Error loading PDF: ${t.message}")
                 loadingDialog.dismiss()
             }
-            .onLoad{
+            .onLoad {
                 loadingDialog.dismiss()
             }
             .load()
-
-
     }
 
     private fun createLoadingDialog(): ProgressDialog {
-        val  progressDialog =  ProgressDialog(this)
+        val progressDialog = ProgressDialog(this)
         progressDialog.setMessage("Loading PDF...")
         progressDialog.setCancelable(false)
         return progressDialog
